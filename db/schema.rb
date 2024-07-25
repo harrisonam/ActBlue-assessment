@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_05_211606) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_25_171654) do
   create_table "candidates", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "poll_id"
+    t.integer "votes_count", default: 0
     t.index ["poll_id"], name: "index_candidates_on_poll_id"
   end
 

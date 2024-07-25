@@ -1,4 +1,4 @@
 class Vote < ApplicationRecord
-    belongs_to :candidate
+    belongs_to :candidate, counter_cache: true
     belongs_to :user
 end
